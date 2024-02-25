@@ -1,10 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class particlefollowplayer : MonoBehaviour
+public class partic : MonoBehaviour
 {
     private Transform _particleSystemTransform;
-    private ParticleSystem _particleSystem;
     [SerializeField] private Transform _gameObjectTransform;
+    private ParticleSystem _particleSystem;
     void Start()
     {
         _particleSystemTransform = GetComponent<Transform>();
@@ -12,6 +14,7 @@ public class particlefollowplayer : MonoBehaviour
         _particleSystem.Play();
     }
 
+    // Update is called once per frame
     void Update()
     {
         _particleSystemTransform.position = new Vector2(_gameObjectTransform.position.x, _gameObjectTransform.position.y);

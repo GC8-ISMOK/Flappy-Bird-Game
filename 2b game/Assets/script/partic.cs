@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class bigbob : MonoBehaviour
 {
-    private Transform tf;
-    [SerializeField] private Transform player_tf;
+    private Transform _transform;
+    [SerializeField] private Transform _playerTransform;
     void Start()
     {
-        tf = GetComponent<Transform>();
+        _transform = GetComponent<Transform>();
     }
 
     void Update()
     {
-        tf.position = new Vector2(player_tf.position.x, player_tf.position.y);
+        _transform.position = new Vector2(_playerTransform.position.x, _playerTransform.position.y);
     }
 }
