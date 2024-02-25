@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class runningscript : MonoBehaviour
 {
-    private Transform tf;
+    private Transform _transform;
+    private float _speedX = 6f;
 
     void Start()
     {        
-        tf = GetComponent<Transform>();
+        _transform = GetComponent<Transform>();
     }
 
     void Update()
     {
 
-        tf.position = new Vector2(tf.position.x - 6f * Time.deltaTime, tf.position.y);
+        _transform.position = new Vector2(_transform.position.x - _speedX * Time.deltaTime, _transform.position.y);
     }
 
 }

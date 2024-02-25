@@ -1,22 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class win_dead : MonoBehaviour
-{
+{   
+    public Animator _cameraShake;        
+    private Rigidbody2D rb;
     [SerializeField] private ParticleSystem part;
     [SerializeField] private ParticleSystem part2;
-
 
     [SerializeField] private Text winText;
     [SerializeField] public Button btn1;
     [SerializeField] public Button btn2;
-    
-    public Animator camshake;        
-    private Rigidbody2D rb;
-    
      
     void Start()
     {
@@ -39,7 +34,7 @@ public class win_dead : MonoBehaviour
         
         part.gameObject.SetActive(true);
         part.Play();
-        camshake.SetTrigger("shake");
+        _cameraShake.SetTrigger("shake");
         gameObject.SetActive(false);
         rb.bodyType = RigidbodyType2D.Static;
         winText.text = "game over";
