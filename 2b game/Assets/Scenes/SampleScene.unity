@@ -10011,7 +10011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddff3c77920e7ee44880f48407a68103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerTransform: {fileID: 0}
+  _playerTransform: {fileID: 1244841651}
 --- !u!1 &363926937
 GameObject:
   m_ObjectHideFlags: 0
@@ -10972,12 +10972,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9166e91227c47ca4ebfeecdbfb250ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraShake: {fileID: 519420030}
   part: {fileID: 143765069}
   part2: {fileID: 103160627}
   winText: {fileID: 62862503}
   btn1: {fileID: 1335016225}
   btn2: {fileID: 1603408881}
-  camshake: {fileID: 519420030}
 --- !u!114 &1244841654
 MonoBehaviour:
   m_ObjectHideFlags: 0
